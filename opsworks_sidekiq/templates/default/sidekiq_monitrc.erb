@@ -1,7 +1,3 @@
-<% @environment.each do |key, value| %>
-ENV['<%= key %>'] = "<%= value %>"
-<% end %>
-
 <% @workers.each do |worker, options| %>
   <% (options[:process_count] || 1).times do |n| %>
   <% identifier = "#{@application}-#{worker}#{n+1}" %>
