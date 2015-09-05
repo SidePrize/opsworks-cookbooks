@@ -3,8 +3,6 @@
   <% env_vars << "#{key}=#{value} " %>
 <% end %>
 
-<%= @environment.
-
 <% @workers.each do |worker, options| %>
   <% (options[:process_count] || 1).times do |n| %>
   <% identifier = "#{@application}-#{worker}#{n+1}" %>
